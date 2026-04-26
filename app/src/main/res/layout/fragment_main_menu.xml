@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainMenuFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mm_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mm_current_job_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:paddingVertical="16dp"
+                android:textSize="16sp"
+                android:text="Enter Current Job"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mm_job_offer_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:paddingVertical="16dp"
+                android:textSize="16sp"
+                android:text="Enter Job Offer"
+                app:layout_constraintTop_toBottomOf="@id/mm_current_job_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mm_comparison_weights_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:paddingVertical="16dp"
+                android:textSize="16sp"
+                android:text="Adjust Comparison Weights"
+                app:layout_constraintTop_toBottomOf="@id/mm_job_offer_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mm_compare_jobs_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="72dp"
+                android:paddingVertical="16dp"
+                android:textSize="16sp"
+                android:text="Compare Jobs"
+                app:layout_constraintTop_toBottomOf="@id/mm_comparison_weights_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
