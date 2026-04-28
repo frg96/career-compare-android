@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.weights.ComparisonWeightFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cw_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_salary_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:text="Salary Weight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_salary_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_salary_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_bonus_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="12dp"
+                android:text="Bonus Weight"
+                app:layout_constraintTop_toBottomOf="@+id/cw_salary_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_bonus_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_bonus_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_match401k_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="12dp"
+                android:text="401K Match Weight"
+                app:layout_constraintTop_toBottomOf="@+id/cw_bonus_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_match401k_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_match401k_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_internet_stipend_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="12dp"
+                android:text="Internet Stipend Weight"
+                app:layout_constraintTop_toBottomOf="@+id/cw_match401k_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_internet_stipend_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_internet_stipend_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_accident_insurance_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="12dp"
+                android:text="Accident Insurance Weight"
+                app:layout_constraintTop_toBottomOf="@+id/cw_internet_stipend_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_accident_insurance_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_accident_insurance_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cw_tuition_reimbursement_weight_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="12dp"
+                android:text="Tuition Reimbursement Weight"
+                app:layout_constraintTop_toBottomOf="@+id/cw_accident_insurance_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/cw_tuition_reimbursement_weight_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:valueFrom = "0"
+                android:valueTo="9"
+                android:stepSize="1"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/cw_tuition_reimbursement_weight_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            <LinearLayout
+                android:id="@+id/cw_button_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="end"
+                app:layout_constraintTop_toBottomOf="@id/cw_tuition_reimbursement_weight_slider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cw_cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cw_save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Save Weights" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
