@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CompareTableCellHeader">
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleSmall.Emphasized</item>
+    </style>
+    <style name="CompareTableCellField">
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall.Emphasized</item>
+    </style>
+    <style name="CompareTableCell">
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+    </style>
+</resources>
