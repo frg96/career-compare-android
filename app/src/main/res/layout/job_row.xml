@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineAmbientShadowColor="#070707"
+    android:outlineSpotShadowColor="#090808">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/job_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="20dp"
+        android:outlineAmbientShadowColor="#070707"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:strokeColor="?attr/colorOutline"
+        app:rippleColor="?attr/colorPrimary"
+        app:strokeWidth="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Software Engineer"
+                android:textColor="#090707"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_company"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Expedia Group"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
