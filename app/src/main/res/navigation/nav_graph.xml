@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.frg96.careercompare.ui.main.MainMenuFragment"
+        android:label="Main Menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFragment_to_currentJobFragment"
+            app:destination="@id/currentJobFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_jobOfferFragment"
+            app:destination="@id/jobOfferFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_comparisonWeightFragment"
+            app:destination="@id/comparisonWeightFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_listofJobFragment"
+            app:destination="@id/listofJobFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/listofJobFragment"
+        android:name="com.frg96.careercompare.ui.joblist.ListofJobFragment"
+        android:label="Select and Compare Jobs"
+        tools:layout="@layout/fragment_job_list" >
+        <action
+            android:id="@+id/action_listofJobFragment_to_compareTwoJobsFragment"
+            app:destination="@id/compareTwoJobsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/currentJobFragment"
+        android:name="com.frg96.careercompare.ui.currentjob.CurrentJobFragment"
+        android:label="Enter Current Job"
+        tools:layout="@layout/fragment_current_job" />
+    <fragment
+        android:id="@+id/jobOfferFragment"
+        android:name="com.frg96.careercompare.ui.joboffer.JobOfferFragment"
+        android:label="Enter Job Offer"
+        tools:layout="@layout/fragment_job_offer" >
+        <action
+            android:id="@+id/action_jobOfferFragment_to_compareTwoJobsFragment"
+            app:destination="@id/compareTwoJobsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/compareTwoJobsFragment"
+        android:name="com.frg96.careercompare.ui.comparison.CompareTwoJobsFragment"
+        android:label="Job Comparison Results"
+        tools:layout="@layout/fragment_compare_two_jobs">
+        <argument
+            android:name="jobIdLeft"
+            app:argType="long" />
+        <argument
+            android:name="jobIdRight"
+            app:argType="long" />
+        <argument
+            android:name="sourceFragment"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/comparisonWeightFragment"
+        android:name="com.frg96.careercompare.ui.weights.ComparisonWeightFragment"
+        android:label="Edit Comparison Weights"
+        tools:layout="@layout/fragment_comparison_weight" />
+</navigation>
