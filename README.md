@@ -137,3 +137,17 @@ Room entities define the table schemas, DAOs query and update those tables, and 
 - Main persistence flows through `JobCompareRepository`.
 - Database writes are dispatched through the `ExecutorService` in `JobCompareRoomDatabase` so persistence work does not block the UI thread.
 - Unit tests cover ranking behavior and fragment workflows.
+
+## App Screenshots
+
+| Main Menu | Current Job |
+| --- | --- |
+| ![Main Menu](images/screenshots/main_menu.png "Main Menu") | ![Current Job](images/screenshots/current_job.png "Current Job") |
+
+| Job Offer | Comparison Weights |
+| --- | --- |
+| ![Job Offer](images/screenshots/job_offer.png "Job Offer") | ![Comparison Weights](images/screenshots/comparison_weights.png "Comparison Weights") |
+
+| Job List | Compare Two Jobs |
+| --- | --- |
+| ![Job List](images/screenshots/job_list.png "Job List") | ![Compare Two Jobs](images/screenshots/compare_two_jobs.png "Compare Two Jobs") |
