@@ -34,6 +34,29 @@ android {
     }
 }
 
+def apkBaseName = "CareerCompare-v${android.defaultConfig.versionName}"
+
+def copyRenamedDebugApk = tasks.register("copyRenamedDebugApk", Copy) {
+    from(layout.buildDirectory.file("outputs/apk/debug/app-debug.apk"))
+    into(layout.buildDirectory.dir("outputs/renamed-apk/debug"))
+    rename { "${apkBaseName}-debug.apk" }
+}
+
+def copyRenamedReleaseApk = tasks.register("copyRenamedReleaseApk", Copy) {
+    from(layout.buildDirectory.file("outputs/apk/release/app-release-unsigned.apk"))
+    into(layout.buildDirectory.dir("outputs/renamed-apk/release"))
+    rename { "${apkBaseName}-release-unsigned.apk" }
+}
+
+afterEvaluate {
+    tasks.named("assembleDebug") {
+        finalizedBy(copyRenamedDebugApk)
+    }
+    tasks.named("assembleRelease") {
+        finalizedBy(copyRenamedReleaseApk)
+    }
+}
+
 dependencies {
     implementation libs.appcompat
     implementation libs.material

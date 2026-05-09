@@ -27,8 +27,8 @@ The app ranks jobs by the resulting score in descending order. If all weights ar
 ## Tech Stack
 
 - Java 21
-- Android Gradle Plugin 9.1.1
-- Gradle Wrapper 9.3.1
+- Android Gradle Plugin 9.2.1
+- Gradle Wrapper 9.4.1
 - Android SDK 36
 - Minimum SDK 34
 - AndroidX AppCompat, Fragment, Navigation, RecyclerView, ConstraintLayout, CardView
